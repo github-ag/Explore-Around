@@ -1,0 +1,9 @@
+1.
+Original Link - https://www.hotelplanner.com/Hotels-Near-Me#search/Bihar%20-%20India/none/none/03-02-2019/03-03-2019/default/ASC/ASC/ASC/0/none/none/none/0/0/0/0/0/0/0/0/0/0/0/0/0/none/none/NaN/5/none/none/none/4/1/1/0/1/1/results/0/
+
+https://www.hotelplanner.com/Hotels-Near-Me#search/{Place to be searched}/none/none/{Check In Date}/{Check out date}/default/ASC/ASC/ASC/0/none/none/none/0/0/0/0/0/0/0/0/0/0/0/0/0/none/none/NaN/5/none/none/none/{No of rooms}/1/1/0/1/1/results/0/
+
+Date Format -> MM-DD-YYYY
+
+2.
+Original Link - 

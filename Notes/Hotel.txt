@@ -1,9 +1,17 @@
-1.
+**1.**
 Original Link - https://www.hotelplanner.com/Hotels-Near-Me#search/Bihar%20-%20India/none/none/03-02-2019/03-03-2019/default/ASC/ASC/ASC/0/none/none/none/0/0/0/0/0/0/0/0/0/0/0/0/0/none/none/NaN/5/none/none/none/4/1/1/0/1/1/results/0/
 
 https://www.hotelplanner.com/Hotels-Near-Me#search/{Place to be searched}/none/none/{Check In Date}/{Check out date}/default/ASC/ASC/ASC/0/none/none/none/0/0/0/0/0/0/0/0/0/0/0/0/0/none/none/NaN/5/none/none/none/{No of rooms}/1/1/0/1/1/results/0/
 
 Date Format -> MM-DD-YYYY
 
-2.
-Original Link - 
+**2.**
+Original Link - https://www.travelguru.com/hotels/hotels-at-pitampura-in-new-delhi
+1 Adult 1 Room
+https://hotels.travelguru.com/hotel-search/tgdom/search?checkinDate=07/03/2019&checkoutDate=08/03/2019&roomRequests[0].id=1&roomRequests[0].noOfAdults=1&roomRequests[0].noOfChildren=0&source=BOOKING_ENGINE&appType=HOTEL&tenant=TGB2C&city.name=New%20Delhi&city.code=New%20Delhi&pg=1&htlFindMthd=booking%20engine:seo
+
+2 Adult 2 Room (1 per room)
+https://hotels.travelguru.com/hotel-search/tgdom/search?checkinDate=07/03/2019&checkoutDate=08/03/2019&roomRequests[0].id=1&roomRequests[0].noOfAdults=1&roomRequests[0].noOfChildren=0&roomRequests[1].id=1&roomRequests[1].noOfAdults=1&roomRequests[1].noOfChildren=0&source=BOOKING_ENGINE&appType=HOTEL&tenant=TGB2C&city.name=New%20Delhi&city.code=New%20Delhi&pg=1&htlFindMthd=booking%20engine:seo
+
+Room 1 - 3 Adult; Room 2 - 2 Adult; Room 3 - Adult 1 (All have 0 children)
+https://hotels.travelguru.com/hotel-search/tgdom/search?checkinDate=07/03/2019&checkoutDate=08/03/2019&roomRequests[0].id=1&roomRequests[0].noOfAdults=3&roomRequests[0].noOfChildren=0&roomRequests[1].id=2&roomRequests[1].noOfAdults=2&roomRequests[1].noOfChildren=0&roomRequests[2].id=3&roomRequests[2].noOfAdults=1&roomRequests[2].noOfChildren=0&source=BOOKING_ENGINE&appType=HOTEL&tenant=TGB2C&city.name=New%20Delhi&city.code=New%20Delhi&pg=1&htlFindMthd=booking%20engine:seo

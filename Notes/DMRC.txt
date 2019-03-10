@@ -1,0 +1,2 @@
+https://delhimetrorail.info/          Extracted route in code using  beautifulSoup
+https://delhimetrorail.com/

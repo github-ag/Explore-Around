@@ -19,7 +19,7 @@ for i in list:
         break
     idx = idx + 1
 if flag == -1:
-    print("Start station not found")
+    print("Destination station not found")
 elif flag == 0:
     with open(fileName) as file:
         reader = csv.reader(file)
@@ -31,4 +31,4 @@ elif flag == 0:
                 print("Price of your route is :",list[idx])
                 break
     if flag == 0:
-        print("Destination station not found")
+        print("Starting station not found")

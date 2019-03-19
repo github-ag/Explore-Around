@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    }
+    body {
+	background-color: #E0E0E0;	/* Grey Color */
+    min-height: 650px;
+}
+    body * {
+    font-family: Arial, Geneva, SunSans-Regular, sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 22px;
+}
+
+    #wrapper {
+    width: 825px;
+    margin: 70 0 0 -412px;
+    position: absolute;
+    left: 50%;
+    top: 30px;
+}
+    #text h3 {
+    font-size: 26px;
+}
+    #text small, #text small * {
+    font-size: 12px;
+    color: #666;
+}
+/*
+    #images {
+    width: 900px;
+	border: 10px;
+    overflow: hidden;
+}
+    #images div, #images img {
+    display: block;
+    float: left;
+    width: 275px;
+    height: 200px;
+}
+    #images span {
+    background-color: black;
+    color: #ccc;
+    display: block;
+    float: left;
+    width: 215px;
+    height: 160px;
+    padding: 40px 30px 0 30px;
+    }
+*/

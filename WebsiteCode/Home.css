@@ -11,7 +11,7 @@ body * {
 	margin: 0;
 	font-family: Arial, Geneva, SunSans-Regular, sans-serif;
 	font-size: 14px;
-	color: #333;
+	color: #333;	/*Why*/
 	line-height: 22px;
 }
 
@@ -46,6 +46,7 @@ body * {
 	font-size: 40px;
 }
 
+/* Aligning images and text in center*/
 #wrapper {
 	width: 825px;
 	margin: 100 0 0 -412px;

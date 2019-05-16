@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'Explore_Around/Login.css' %}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>My Example</title>
+</head>
+<body>
+	<div class="WebsiteName"><marquee><div class="heading1">Travel-Go</div></marquee></div>
+	<!-- Top Bar -->
+	<div class="topnav">
+		<a href="/Explore_Around/home/">Home</a>
+		<a href="/Explore_Around/placeinfo/">Place Info</a>
+		<a href="/Explore_Around/distance/">Distance</a>
+		<a href="/Explore_Around/metro/">Metro</a>
+		<a href="/Explore_Around/hotel/">Hotel</a>
+		<a href="/Explore_Around/weather/">Weather</a>
+		<a class="active" href="/Explore_Around/login/">Login</a>
+		<a href="/Explore_Around/mailus/">Mail Us</a>
+		<a href="/Explore_Around/aboutus/">About Us</a>
+	</div>
+	<br><br>
+	<center>
+	<form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
+
+	<label class="audioOnly" for="user_email">Email</label> 
+	<input type="email" name="user_email" required placeholder="Email">
+
+	<br>
+	<label class="audioOnly" for="user_pwd">Password</label> 
+	<input type="password" name="user_pwd" required placeholder="Password">
+
+	<label>
+	<input type="checkbox"> Remember me
+	</label>
+
+	<button>Log In</button>
+
+	</form>
+	</center>
+
+</body>
+</html>

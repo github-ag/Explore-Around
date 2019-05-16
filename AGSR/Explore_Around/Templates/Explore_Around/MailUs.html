@@ -1,0 +1,61 @@
+<html>
+<head>
+	<!--Combining HTML, CSS, JS-->
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'Explore_Around/MailUs.css' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div class="WebsiteName"><marquee><div class="heading1">Travel-Go</div></marquee></div>
+	<!-- Top Bar -->
+	<div class="topnav">
+		<a href="/Explore_Around/home/">Home</a>
+		<a href="/Explore_Around/placeinfo/">Place Info</a>
+		<a href="/Explore_Around/distance/">Distance</a>
+		<a href="/Explore_Around/metro/">Metro</a>
+		<a href="/Explore_Around/hotel/">Hotel</a>
+		<a href="/Explore_Around/weather/">Weather</a>
+		<a href="/Explore_Around/login/">Login</a>
+		<a class="active" href="/Explore_Around/mailus/">Mail Us</a>
+		<a href="/Explore_Around/aboutus/">About Us</a>
+	</div>
+
+	<div id="wrapper">
+		<form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
+
+		<p>
+		<label>Name 
+		<input type="text" name="CustomerName" required>
+		</label>
+		</p>
+
+		<p>
+		<label><br>Email 
+		<input type="email" name="CustomerMailID">
+		</label>
+		</p>
+			
+		<p>
+		<label><br>Subject
+		<input type="text" name="MailSubject" required>
+		</label> 
+		</p>
+
+		<p>
+		<label><br>Enquiry 
+		<textarea name="MailBody" maxlength="1000"></textarea>
+		</label>
+		</p>
+
+		<p><button>Submit Enquiry</button></p>
+
+		</form>
+	</div>
+
+	<p style="position:fixed;bottom:0;right:0px;border: 3px solid #00AAAA;padding: 10px;">
+		A work by 
+		<a href="https://github.com/github-ag/" style="text-decoration:None;">AG</a><a href="https://github.com/github-sr/" style="text-decoration:None;">SR</a>
+	</p>
+</body>
+</html>

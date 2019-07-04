@@ -43,7 +43,7 @@ model = MultinomialNB()
 model.fit(X_train,y_train)
 
 user = 'gotravel.agsr@gmail.com'
-password = 'travel14&08'
+password = 'travel1234'
 imap_url = 'imap.googlemail.com'
 con = imaplib.IMAP4_SSL(imap_url)
 con.login(user,password)

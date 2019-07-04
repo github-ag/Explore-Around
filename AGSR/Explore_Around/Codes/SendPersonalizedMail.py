@@ -8,10 +8,9 @@ from email.mime.multipart import MIMEMultipart
 
 def sendMailFunction(name,mail,subject,query):
 	mailServer = 'gmail'
-	#sender_email = 'gotravel.agsr@gmail.com'
-	sender_email = 'sachinroy290@gmail.com'
-	password = ''
-	receiver_email = 'sachinroy784@gmail.com'
+	sender_email = 'gotravel.agsr@gmail.com'
+	password = 'travel1234'
+	receiver_email = 'gotravel.agsr@gmail.com'
 
 	message = MIMEMultipart("alternative")
 

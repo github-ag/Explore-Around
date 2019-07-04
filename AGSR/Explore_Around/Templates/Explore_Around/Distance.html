@@ -30,45 +30,25 @@
 				
 				<!-- target="_blank" helps in opening current link in new tab when link is clicked -->
 		</div>
-		<div id="images">
-			<div id="a">
-				<a href="https://www.google.com">
-				<img src="Images/place.jpg" alt="Img" width="275" height="200" align="left"/></a>
-				<span>Decription of place info code</span>
-				<br><br><br><br><br><br><br><br><br><br>	<!--Aligning images, No of br tags is based on size of text in description above-->
-			</div>
-			<div>
-				<a href="https://www.google.com">
-				<img src="Images/distance.jpg" alt="Img" width="275" height="200" align="right"/></a>
-				<span>Decription of distance code</span>
-				<br><br><br><br><br><br><br><br><br><br>	<!--Aligning images, No of br tags is based on size of text in description above-->
-			</div>
-			<div>
-				<a href="https://www.google.com">
-				<img src="Images/metro.jpg" alt="Img" width="275" height="200" align="left"/></a>
-				<span>Decription of metro code</span>
-				<br><br><br><br><br><br><br><br><br><br>	<!--Aligning images, No of br tags is based on size of text in description above-->
-			</div>
-			<div>
-				<a href="https://www.google.com">
-				<img src="Images/hotel.jpg" alt="Img" width="275" height="200" align="right"/></a>
-				<span>Decription of hotel code</span>
-				<br><br><br><br><br><br><br><br><br><br>	<!--Aligning images, No of br tags is based on size of text in description above-->
-			</div>
-			<div>
-				<a href="https://www.google.com">
-				<img src="Images/weather.jpg" alt="Img" width="275" height="200" align="left"/></a>
-				<span>Decription of weather code</span>
-				<br><br><br><br><br><br><br><br><br><br>	<!--Aligning images, No of br tags is based on size of text in description above-->
-			</div>
-			<div>
-				<a href="https://www.google.com">
-				<img src="Images/mail.png" alt="Img" width="275" height="200" align="right"/></a>
-				<span>Decription of mail code</span>
-			</div>
+		{% if form %}
+			<form action="/Explore_Around/distance/" method="POST">
+				{% csrf_token %}
+				<label for="placeName">Place Name</label>
+				{{ form.fromName }}
+				<label for="placeName">Place Name</label>
+				{{ form.toName }}
+				<input type="submit" value="OK">
+			</form>
+		{% endif %}
+		
+		{% if info %}
+			<p style="font-size:20px; color:blue; font-family: "Times New Roman";">
+				{{info}}
+			</p>
+		{% else %}
+			<!-- <p>No polls are available.</p> -->
+		{% endif %}
 
-
-		</div>
 	</div>
 	
 	<p>

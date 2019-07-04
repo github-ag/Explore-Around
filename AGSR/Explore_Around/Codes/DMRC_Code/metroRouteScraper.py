@@ -1,7 +1,7 @@
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
 
-def getStation(i):
+def getStation(i,route):
     try:
         s = route[i].contents[0].contents[0]
         return s
@@ -10,13 +10,11 @@ def getStation(i):
 
 # url = "https://delhimetrorail.info/peera-garhi-delhi-metro-station-to-dwarka-mor-delhi-metro-station?live=true"
 #URL Formation
-flag = 1
-while flag == 1:
+def metroRoute(fromS,toS):
+    route = ""
     try:
         a = "https://delhimetrorail.info/"
-        fromS = input("Enter Start Station : ")
         fromStation = fromS.lower().replace(" ","-")
-        toS = input("Enter Destination Station : ")
         toStation = toS.lower().replace(" ","-")
         b = "-delhi-metro-station"
 
@@ -26,24 +24,22 @@ while flag == 1:
 
         route = soup.find("div",{"id":"divCanvas"})
         route = route.findAll("div")
-        flag = 0
     except:
-        print("Enter valid Station names or check your internet connection")
-        flag = 1
+        return "Enter valid Station names or check your internet connection"
 
 
-i = 1
-prev = "1"
-s = getStation(i)
-while s.lower() != toS.lower():
-    if s != "":
-        if prev == s:
-            print()
-            print("Change Station Here")
-            print("")
-        print(s,end = " -> ")
-        prev = s
-    i += 1
-    s = getStation(i)
-print(s)
-
+    i = 1
+    prev = "1"
+    s = getStation(i,route)
+    finalRoute = ""
+    while s.lower() != toS.lower():
+        if s != "":
+            if prev == s:
+                finalRoute += "\nChange Station Here\n" + s + " -> "
+            else:
+                finalRoute += s + " -> "
+            prev = s
+        i += 1
+        s = getStation(i,route)
+    finalRoute += s
+    return finalRoute

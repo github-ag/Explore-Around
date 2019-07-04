@@ -30,41 +30,12 @@
 				
 				<!-- target="_blank" helps in opening current link in new tab when link is clicked -->
 		</div>
-		<!--
-		<p>
-		<label><br>Email 
-		<input type="text" name="city">
-		</label>
-		</p> -->
-		
-		{% if form %}
-			<form action="/Explore_Around/placeinfo/" method="POST">
-				{% csrf_token %}
-				<label for="placeName">Place Name</label>
-				{{ form }}
-				<input type="submit" value="OK">
-			</form>
-		{% endif %}
-		
-		{% if info %}
-			<p style="font-size:20px; color:blue; font-family: "Times New Roman";">
-				{{info}}
-				
-				<!--
-			{% for i in info %}
-				{% if i == ' ' %}
-					<br>
-				{% else %}
-					{{i}}
-				{% endif %}
-			{% endfor %}
-				-->
-
-			</p>
-		{% else %}
-			<!-- <p>No polls are available.</p> -->
-		{% endif %}
-
+		<form action="/Explore_Around/placeinfo/" method="POST">
+			{% csrf_token %}
+			<label for="placeName"></label>
+			{{ form }}
+			<input type="submit" value="OK">
+		</form>
 	</div>
 	
 

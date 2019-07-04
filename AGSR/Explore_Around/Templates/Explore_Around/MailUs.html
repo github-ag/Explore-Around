@@ -22,35 +22,49 @@
 	</div>
 
 	<div id="wrapper">
-		<form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
-
-		<p>
-		<label>Name 
-		<input type="text" name="CustomerName" required>
-		</label>
-		</p>
-
-		<p>
-		<label><br>Email 
-		<input type="email" name="CustomerMailID">
-		</label>
-		</p>
-			
-		<p>
-		<label><br>Subject
-		<input type="text" name="MailSubject" required>
-		</label> 
-		</p>
-
-		<p>
-		<label><br>Enquiry 
-		<textarea name="MailBody" maxlength="1000"></textarea>
-		</label>
-		</p>
-
-		<p><button>Submit Enquiry</button></p>
-
-		</form>
+	
+		{% if form %}
+			<form action="/Explore_Around/mailus/" method="POST">	<!--  class = "myForm" -->
+				{% csrf_token %}
+				<table>
+				<tr> <td>
+				<label for="name">Name</label>
+				</td> <td>
+				{{ form.name }}</td> </tr>
+				
+				<tr> <td>
+				<label for="mail">Mail Id</label>
+				</td> <td><br>
+				{{ form.mail }}<br><br></td> </tr>
+				
+				<tr> <td>
+				<label for="subject">Subject</label>
+				</td> <td>
+				{{ form.subject }}</td> </tr>
+				
+				<tr> <td>
+				<label for="query">Query</label>
+				</td> <td>
+				{{ form.query }}</td> </tr>
+				
+				<tr><td></td><td></td></tr>
+				<tr><td></td><td></td></tr>
+				<tr><td></td><td></td></tr>
+				<tr><td></td><td></td></tr>
+				
+				<tr><td></td><td><input type="submit" value="OK"></td></tr>
+				</table>
+			</form>
+		{% endif %}
+		
+		{% if info %}
+			<p style="font-size:20px; color:blue; font-family: "Times New Roman";">
+				{{info}}
+			</p>
+		{% else %}
+			<!-- <p>No polls are available.</p> -->
+		{% endif %}
+		
 	</div>
 
 	<p style="position:fixed;bottom:0;right:0px;border: 3px solid #00AAAA;padding: 10px;">

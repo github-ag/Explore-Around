@@ -47,3 +47,4 @@ print(Ad.contents[0])
 
 print("LOL")
 
+input()

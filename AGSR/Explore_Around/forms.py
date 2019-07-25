@@ -9,10 +9,6 @@ class MailForm(forms.Form):
 	subject = forms.CharField(label='', max_length=100)
 	query = forms.CharField(label='', max_length=100)
 
-class MetroForm(forms.Form):
-	fromName = forms.CharField(label='', max_length=100)
-	toName = forms.CharField(label='', max_length=100)
-
-class DistanceForm(forms.Form):
+class TwoForm(forms.Form):
 	fromName = forms.CharField(label='', max_length=100)
 	toName = forms.CharField(label='', max_length=100)

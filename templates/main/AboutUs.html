@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+    
+    <div class="common">
+
+       <p class="describe">Made with ❤️ by Abhishek and Sachin to help tourists all over the world.</p>
+    <table class="aboutustable" cellspacing="5">
+      <tr>
+        <td><img class="roundphoto" src="{% static 'Images/myphoto.jpg' %}" alt="Abhishek's photo"height="200px"width="200px"></td>
+        <td><img class="roundphoto"src="{% static 'Images/sachinphoto.jpg' %}" alt="Sachin's photo"height="200px"width="200px"></td>
+      </tr>
+      <tr>
+        <td><h4>Abhishek Garg</h4></td>
+        <td><h4>Sachin Roy</h4></td>
+
+      </tr>
+      <tr>
+        <td><h4>Delhi Technological University</h4></td>
+        <td class="column2"><h4>Netaji Subhash University of Technology</h4></td>
+
+      </tr>
+      <tr>
+        <td><a href="https://github.com/github-ag">Github Profile</a></td>
+        <td><a href="https://github.com/github-sr">Github profile</a></td>
+
+      </tr>
+    </table>
+
+    </div>
+    {% endblock %}

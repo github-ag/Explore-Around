@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+		{% if form %}
+			<form action="" method="POST" class="common">	<!--  class = "myForm" -->
+				{% csrf_token %}
+				<table>
+				<tr> <td>
+				<label for="name">Name</label>
+				</td> <td>
+				{{ form.name }}</td> </tr>
+				
+				<tr> <td>
+				<label for="mail">Mail Id</label>
+				</td> <td><br>
+				{{ form.mail }}<br><br></td> </tr>
+				
+				<tr> <td>
+				<label for="subject">Subject</label>
+				</td> <td>
+				{{ form.subject }}</td> </tr>
+				
+				<tr> <td>
+				<label for="query">Query</label>
+				</td> <td>
+				{{ form.query }}</td> </tr>
+				
+				<tr><td></td><td></td></tr>
+				<tr><td></td><td></td></tr>
+				<tr><td></td><td></td></tr>
+				<tr><td></td><td></td></tr>
+				
+				<tr><td></td><td><input type="submit" value="OK"></td></tr>
+				</table>
+			</form>
+		{% endif %}
+		
+		{% if info %}
+			<p style="font-size:20px; color:blue; font-family: 'Times New Roman';">
+				{{info}}
+			</p>
+		{% else %}
+			<!-- <p>No polls are available.</p> -->
+		{% endif %}
+		
+{% endblock %}

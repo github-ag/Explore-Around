@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore Around</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="icon" href="{% static 'Images/logo.ico' %}">
+</head>
+<body>
+
+    <div class="heading">
+        <h1>Explore Around</h1>
+        </div>
+        <div class="navigation">
+            <a href="{% url 'home' %}">🏠Home</a>
+            <a href="{% url 'place_info' %}">📖Place Guide</a>
+            <a href="{% url 'distance' %}">🚔Distance</a>
+            <a href="{% url 'weather' %}">☁️Weather</a>
+            <a href="{% url 'metro' %}">Metro</a>		<!--  href="#Metro"  -->
+            <a href="{% url 'hotel' %}">Hotel</a>
+            <a href="{% url 'mail_us' %}">📧Mail Us</a>
+            <a href="{% url 'about_us' %}">😉About Us</a>
+            <a href="{% url 'login' %}">Login</a>
+        </div>
+        
+    {% block content %} {% endblock %}
+	<p style="position:fixed;bottom:0;right:0px;border: 3px solid #00AAAA;padding: 10px;">
+		A work by 
+		<a href="https://github.com/github-ag/" style="text-decoration:None;">AG</a><a href="https://github.com/github-sr/" style="text-decoration:None;">SR</a>
+	</p>
+    {% block script %} {% endblock %}
+</body>
+</html>
+

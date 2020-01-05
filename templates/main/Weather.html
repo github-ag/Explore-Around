@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+		{% if form %}
+			<form action="" method="POST" class="common">
+				{% csrf_token %}
+				<label for="placeName">Place Name</label>
+				{{ form }}
+				<input type="submit" value="OK">
+			</form>
+		{% endif %}
+		
+		{% if info %}
+			<p style="font-size:20px; color:blue; font-family: 'Times New Roman';" class="common">
+				{{info}}
+			</p>
+		{% else %}
+			<!-- <p>No polls are available.</p> -->
+		{% endif %}
+
+{% endblock %}

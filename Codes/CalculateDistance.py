@@ -2,22 +2,16 @@ from bs4 import BeautifulSoup
 import requests, os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from Codes import chromeDriver
+
+driver = chromeDriver.getDriver()
+# driver = chromeDriver.getDriverTest()
 
 def calDistance(starting, destination):
     url = 'https://distancecalculator.globefeed.com/India_Distance_Result.asp?vr=apes&fromplace={},India&toplace={},India'.format(starting,destination)
 
-    GOOGLE_CHROME_BIN = os.getenv('GOOGLE_CHROME_BIN')
-    CHROMEDRIVER_PATH = os.getenv('CHROMEDRIVER_PATH')
-
-    chrome_options = Options()
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--disable-gpu')
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.binary_location = GOOGLE_CHROME_BIN
-
     curr = ""
     try:
-        driver = webdriver.Chrome(CHROMEDRIVER_PATH, chrome_options=chrome_options)
         driver.get(url)
 
         res = driver.execute_script("return document.documentElement.outerHTML")

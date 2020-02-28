@@ -4,7 +4,22 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from Codes import SendPersonalizedMail, DMRC_Code, CalculateDistance, place_info, WeatherDetails
 from Codes.DMRC_Code import metroFareCSV, metroRouteScraper
+import os
 
+# import redis
+# from rq import Worker, Queue, Connection
+# from rq.job import Job
+# 
+# listen = ['high', 'default', 'low']
+# 
+# redis_url = os.getenv('REDIS_URL')
+# 
+# conn = redis.from_url(redis_url)
+# with Connection(conn):
+#     worker = Worker(map(Queue, listen))
+#     worker.work()
+# 
+# q = Queue(connection = conn)
 
 def home(request):
     return render(request, 'main/Home.html')
@@ -140,13 +155,21 @@ def mailus(request):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            nameCurr = str(form.cleaned_data['name'])
-            mailCurr = str(form.cleaned_data['mail'])
-            subjectCurr = str(form.cleaned_data['subject'])
-            queryCurr = str(form.cleaned_data['query'])
-            
+            name = str(form.cleaned_data['name'])
+            mail_id = str(form.cleaned_data['mail'])
+            subject = str(form.cleaned_data['subject'])
+            query = str(form.cleaned_data['query'])
+            # q.enqueue_call(
+            #     func = SendPersonalizedMail.sendMailFunction, args = (name, mail_id, subject, query), result_ttl = 600, timeout = '10m'
+            # )
+
+            # context = {
+            #     'info': 'Our team will contact you soon'
+            # }
+            # # ===================================
+            mail_result = SendPersonalizedMail.sendMailFunction(name, mail_id, subject, query)
             context = {
-                'info': SendPersonalizedMail.sendMailFunction(nameCurr, mailCurr, subjectCurr, queryCurr)
+                'info': mail_result
             }
             return render(request, 'main/MailUs.html', context)
         
